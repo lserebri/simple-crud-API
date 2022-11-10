@@ -4,6 +4,7 @@
 
 Simple REST API which implements CREATE,READ,UPDATE,DELETE logic with user entities
 #Endpoints
+```bash
 $ POST /users
   Description:
     Allows you to create a new user
@@ -24,7 +25,7 @@ $ GET /users
 
 $ PUT /users/:id
   Description:
-    Allows you to update user's information
+    Allows you to update user''s information
   Body:
     firstName [optional]
     lastName [optional]
@@ -37,6 +38,7 @@ $ DELETE /users/:id
   Headers:
     X-API-Key [required] (Should be specified in the .env file)
 
+```
 ## Installation
 
 ```bash
