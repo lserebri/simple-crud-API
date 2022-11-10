@@ -3,8 +3,11 @@
 ## Description
 
 Simple REST API which implements CREATE,READ,UPDATE,DELETE logic with user entities
-#Endpoints
+
 ```bash
+
+#Endpoints
+
 $ POST /users
   Description:
     Allows you to create a new user
