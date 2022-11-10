@@ -28,7 +28,7 @@ $ GET /users
 
 $ PUT /users/:id
   Description:
-    Allows you to update user''s information
+    Allows you to update user's information
   Body:
     firstName [optional]
     lastName [optional]
