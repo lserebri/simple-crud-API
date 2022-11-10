@@ -7,7 +7,9 @@ import {
   Post,
   Put,
   Query,
+  UseGuards,
 } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import { ApiQuery } from '@nestjs/swagger';
 import { CreateUserDto } from '../dto/CreateUser.dto';
 import { UpdateUserDto } from '../dto/UpdateUser.dto';
@@ -19,6 +21,7 @@ export class UsersController {
   constructor(private usersService: UsersService) {}
 
   @Post()
+  @UseGuards(AuthGuard('api-key'))
   async create(@Body() createUser: CreateUserDto) {
     await this.usersService.create(createUser);
   }
@@ -42,6 +45,7 @@ export class UsersController {
   }
 
   @Put(':id')
+  @UseGuards(AuthGuard('api-key'))
   async update(
     @Body() updateUser: UpdateUserDto,
     @Param() params: UserParamDto,
@@ -52,6 +56,7 @@ export class UsersController {
     });
   }
 
+  @UseGuards(AuthGuard('api-key'))
   @Delete(':id')
   async delete(@Param() params: UserParamDto) {
     this.usersService.delete(params.id);
