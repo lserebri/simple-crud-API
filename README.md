@@ -8,7 +8,7 @@ Simple REST API which implements CREATE,READ,UPDATE,DELETE logic with user entit
 
 #Endpoints
 
-$' POST /users'
+'$ POST /users'
   Description:
     Allows you to create a new user
   Body:
@@ -17,7 +17,7 @@ $' POST /users'
   Headers:
     X-API-Key [required] (Should be specified in the .env file)
 
-$' GET /users'
+'$ GET /users'
   Description:
     Returns a list of users by specified filters in the request query parameters.
     If no parameters were provided, returns all users.
@@ -26,7 +26,7 @@ $' GET /users'
     -lastName [optional],
     -createdBefore [optional] [YYYY-MM-DDTHH:MM:SS] (Returns users created before the specified date)
 
-$' PUT /users/:id'
+'$ PUT /users/:id'
   Description:
     Allows you to update users information
   Body:
@@ -35,7 +35,7 @@ $' PUT /users/:id'
   Headers:
     X-API-Key [required] (Should be specified in the .env file)
 
-$' DELETE /users/:id'
+'$ DELETE /users/:id'
   Description:
     Allows you to delete specific user by id
   Headers:
